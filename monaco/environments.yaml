@@ -1,4 +1,4 @@
-saas_sprint:
-   - name: "My Sprint Tenant"
+sprint-tenant:
+   - name: "My sprint tenant"
    - env-url: "https://ztn45169.sprint.dynatracelabs.com/"
    - env-token-name: "DT_API_TOKEN"

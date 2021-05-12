@@ -5,7 +5,7 @@
    "timeframe": "l_2_HOURS"
   },
   "name": "{{.name}}",
-  "owner": "christian.barth@dynatrace.com",
+  "owner": "martin.nirtl@dynatrace.com",
   "shared": false,
   "sharingDetails": {
    "linkShared": false,
