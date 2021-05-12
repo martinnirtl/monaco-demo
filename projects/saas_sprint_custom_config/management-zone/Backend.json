@@ -1,0 +1,31 @@
+{
+ "dimensionalRules": [],
+ "metadata": {
+  "clusterVersion": "1.210.72.20210128-174736",
+  "configurationVersions": [
+   0
+  ]
+ },
+ "name": "{{.name}}",
+ "rules": [
+  {
+   "conditions": [
+    {
+     "comparisonInfo": {
+      "caseSensitive": false,
+      "negate": false,
+      "operator": "BEGINS_WITH",
+      "type": "STRING",
+      "value": "{{.pattern}}"
+     },
+     "key": {
+      "attribute": "SERVICE_DETECTED_NAME"
+     }
+    }
+   ],
+   "enabled": true,
+   "propagationTypes": [],
+   "type": "SERVICE"
+  }
+ ]
+}

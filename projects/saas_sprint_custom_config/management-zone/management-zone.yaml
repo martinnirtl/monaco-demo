@@ -1,0 +1,8 @@
+config:
+- Backend: Backend.json
+- K8s: K8s.json
+Backend:
+- name: Backend
+- pattern: booking
+K8s:
+- name: K8s

@@ -1,0 +1,2051 @@
+{
+ "dashboardMetadata": {
+  "dashboardFilter": null,
+  "name": "{{.name}}",
+  "owner": "christian.barth@dynatrace.com",
+  "shared": false,
+  "sharingDetails": {
+   "linkShared": true,
+   "published": false
+  }
+ },
+ "metadata": {
+  "clusterVersion": "1.210.72.20210128-174736",
+  "configurationVersions": [
+   3
+  ]
+ },
+ "tiles": [
+  {
+   "bounds": {
+    "height": 38,
+    "left": 1862,
+    "top": 38,
+    "width": 608
+   },
+   "configured": true,
+   "markdown": "Total latency [ms]  by Forwarding rule",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 0,
+    "top": 722,
+    "width": 608
+   },
+   "configured": true,
+   "markdown": "Response bytes by Forwarding rule",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 0,
+    "top": 38,
+    "width": 608
+   },
+   "configured": true,
+   "markdown": "Request count by Forwarding rule",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 0,
+    "top": 380,
+    "width": 608
+   },
+   "configured": true,
+   "markdown": "Request bytes by Forwarding rule",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 1862,
+    "top": 380,
+    "width": 608
+   },
+   "configured": true,
+   "markdown": "Frontend RTT [ms]  by Forwarding rule",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 0,
+    "top": 1748,
+    "width": 608
+   },
+   "configured": true,
+   "markdown": "Backend response bytes by Forwarding rule",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 0,
+    "top": 1064,
+    "width": 608
+   },
+   "configured": true,
+   "markdown": "Backend request count by Forwarding rule",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 0,
+    "top": 1406,
+    "width": 608
+   },
+   "configured": true,
+   "markdown": "Backend request bytes by Forwarding rule",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 1862,
+    "top": 722,
+    "width": 608
+   },
+   "configured": true,
+   "markdown": "Backend latencies [ms]  by Forwarding rule",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 0,
+    "top": 0,
+    "width": 304
+   },
+   "configured": true,
+   "name": "Usage",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "HEADER"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 1862,
+    "top": 0,
+    "width": 304
+   },
+   "configured": true,
+   "name": "Performance",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "HEADER"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 1216,
+    "top": 38,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "Request count by Protocol",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 1216,
+    "top": 76,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.request_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "protocol",
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "PIE_CHART"
+   }
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 608,
+    "top": 38,
+    "width": 608
+   },
+   "configured": true,
+   "markdown": "Request count by Backend",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 608,
+    "top": 76,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.request_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "backend_name",
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "TOP_LIST"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 304,
+    "top": 76,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.request_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "GRAPH_CHART"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 912,
+    "top": 76,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.request_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "backend_name",
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "GRAPH_CHART"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 0,
+    "top": 418,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.request_bytes_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "TOP_LIST"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 304,
+    "top": 418,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.request_bytes_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "GRAPH_CHART"
+   }
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 608,
+    "top": 380,
+    "width": 608
+   },
+   "configured": true,
+   "markdown": "Request bytes by Backend",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 608,
+    "top": 418,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.request_bytes_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "backend_name",
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "TOP_LIST"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 912,
+    "top": 418,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.request_bytes_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "backend_name",
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "GRAPH_CHART"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 0,
+    "top": 760,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.response_bytes_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "TOP_LIST"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 304,
+    "top": 760,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.response_bytes_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "GRAPH_CHART"
+   }
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 608,
+    "top": 722,
+    "width": 608
+   },
+   "configured": true,
+   "markdown": "Response bytes by Backend",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 608,
+    "top": 760,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.response_bytes_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "backend_name",
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "TOP_LIST"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 912,
+    "top": 760,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.response_bytes_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "backend_name",
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "GRAPH_CHART"
+   }
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 1520,
+    "top": 38,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "Request count by Client country",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 1520,
+    "top": 76,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.request_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "client_country",
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "PIE_CHART"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 0,
+    "top": 1102,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.backend_request_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "TOP_LIST"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 304,
+    "top": 1102,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.backend_request_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "GRAPH_CHART"
+   }
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 608,
+    "top": 1064,
+    "width": 608
+   },
+   "configured": true,
+   "markdown": "Backend request count by Backend",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 608,
+    "top": 1102,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.backend_request_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "backend_name",
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "TOP_LIST"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 912,
+    "top": 1102,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.backend_request_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "backend_name",
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "GRAPH_CHART"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 0,
+    "top": 1444,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.backend_request_bytes_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "TOP_LIST"
+   }
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 608,
+    "top": 1406,
+    "width": 608
+   },
+   "configured": true,
+   "markdown": "Backend request bytes by Backend",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 608,
+    "top": 1444,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.backend_request_bytes_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "TOP_LIST"
+   }
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 608,
+    "top": 1748,
+    "width": 608
+   },
+   "configured": true,
+   "markdown": "Backend response bytes by Backend",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 0,
+    "top": 1786,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.backend_response_bytes_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "TOP_LIST"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 608,
+    "top": 1786,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.backend_response_bytes_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "backend_name",
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "TOP_LIST"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 304,
+    "top": 1444,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.backend_request_bytes_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "GRAPH_CHART"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 304,
+    "top": 1786,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.backend_response_bytes_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "GRAPH_CHART"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 912,
+    "top": 1444,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.backend_request_bytes_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "GRAPH_CHART"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 912,
+    "top": 1786,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.backend_response_bytes_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "backend_name",
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "GRAPH_CHART"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 0,
+    "top": 76,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.request_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "TOP_LIST"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 1862,
+    "top": 76,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.total_latencies",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "TOP_LIST"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 1862,
+    "top": 418,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.frontend_tcp_rtt",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "TOP_LIST"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 1862,
+    "top": 760,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.backend_latencies",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "TOP_LIST"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 2166,
+    "top": 76,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.total_latencies",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "GRAPH_CHART"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 2166,
+    "top": 418,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.frontend_tcp_rtt",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "GRAPH_CHART"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 2166,
+    "top": 760,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.backend_latencies",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "GRAPH_CHART"
+   }
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 1216,
+    "top": 380,
+    "width": 608
+   },
+   "configured": true,
+   "markdown": "Request count Response code",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 1216,
+    "top": 418,
+    "width": 608
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.request_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "backend_name",
+      "response_code",
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "TABLE"
+   }
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 1216,
+    "top": 722,
+    "width": 608
+   },
+   "configured": true,
+   "markdown": "Request count Response code",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 1216,
+    "top": 760,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.request_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "backend_name",
+      "response_code",
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "PIE_CHART"
+   }
+  },
+  {
+   "bounds": {
+    "height": 304,
+    "left": 1520,
+    "top": 760,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "Data Explorer results",
+   "name": "Data Explorer",
+   "queries": [
+    {
+     "filterBy": null,
+     "foldTransformation": null,
+     "id": "B",
+     "metric": "cloud.gcp.loadbalancing_googleapis_com.https.request_count",
+     "metricSelector": null,
+     "spaceAggregation": "AVG",
+     "splitBy": [
+      "response_code",
+      "project_id",
+      "forwarding_rule_name"
+     ],
+     "timeAggregation": "DEFAULT"
+    }
+   ],
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DATA_EXPLORER",
+   "visualConfig": {
+    "global": {
+     "seriesType": "LINE",
+     "theme": "DEFAULT",
+     "threshold": null
+    },
+    "rules": [
+     {
+      "matcher": "B:",
+      "properties": {
+       "color": null,
+       "seriesType": "LINE"
+      }
+     }
+    ],
+    "type": "GRAPH_CHART"
+   }
+  }
+ ]
+}

@@ -1,0 +1,152 @@
+{
+ "dimensionalRules": [],
+ "metadata": {
+  "clusterVersion": "1.210.72.20210128-174736",
+  "configurationVersions": [
+   0
+  ]
+ },
+ "name": "{{.name}}",
+ "rules": [
+  {
+   "conditions": [
+    {
+     "comparisonInfo": {
+      "caseSensitive": true,
+      "negate": false,
+      "operator": "EQUALS",
+      "type": "STRING",
+      "value": "Kubernetes Azure"
+     },
+     "key": {
+      "attribute": "KUBERNETES_CLUSTER_NAME"
+     }
+    }
+   ],
+   "enabled": true,
+   "propagationTypes": [],
+   "type": "KUBERNETES_CLUSTER"
+  },
+  {
+   "conditions": [
+    {
+     "comparisonInfo": {
+      "caseSensitive": true,
+      "negate": false,
+      "operator": "EQUALS",
+      "type": "STRING",
+      "value": "Kubernetes Azure"
+     },
+     "key": {
+      "attribute": "KUBERNETES_CLUSTER_NAME"
+     }
+    }
+   ],
+   "enabled": true,
+   "propagationTypes": [],
+   "type": "HOST"
+  },
+  {
+   "conditions": [
+    {
+     "comparisonInfo": {
+      "caseSensitive": true,
+      "negate": false,
+      "operator": "EQUALS",
+      "type": "STRING",
+      "value": "Kubernetes Azure"
+     },
+     "key": {
+      "attribute": "KUBERNETES_CLUSTER_NAME"
+     }
+    },
+    {
+     "comparisonInfo": {
+      "caseSensitive": true,
+      "negate": false,
+      "operator": "BEGINS_WITH",
+      "type": "STRING",
+      "value": "default"
+     },
+     "key": {
+      "attribute": "PROCESS_GROUP_PREDEFINED_METADATA",
+      "dynamicKey": "KUBERNETES_NAMESPACE",
+      "type": "PROCESS_PREDEFINED_METADATA_KEY"
+     }
+    }
+   ],
+   "enabled": true,
+   "propagationTypes": [],
+   "type": "PROCESS_GROUP"
+  },
+  {
+   "conditions": [
+    {
+     "comparisonInfo": {
+      "caseSensitive": true,
+      "negate": false,
+      "operator": "EQUALS",
+      "type": "STRING",
+      "value": "Kubernetes Azure"
+     },
+     "key": {
+      "attribute": "KUBERNETES_CLUSTER_NAME"
+     }
+    }
+   ],
+   "enabled": true,
+   "propagationTypes": [],
+   "type": "SERVICE"
+  },
+  {
+   "conditions": [
+    {
+     "comparisonInfo": {
+      "caseSensitive": true,
+      "negate": false,
+      "operator": "EQUALS",
+      "type": "STRING",
+      "value": "Kubernetes Azure"
+     },
+     "key": {
+      "attribute": "KUBERNETES_CLUSTER_NAME"
+     }
+    },
+    {
+     "comparisonInfo": {
+      "caseSensitive": true,
+      "negate": false,
+      "operator": "BEGINS_WITH",
+      "type": "STRING",
+      "value": "default"
+     },
+     "key": {
+      "attribute": "CLOUD_APPLICATION_NAMESPACE_NAME"
+     }
+    }
+   ],
+   "enabled": true,
+   "propagationTypes": [],
+   "type": "CLOUD_APPLICATION_NAMESPACE"
+  },
+  {
+   "conditions": [
+    {
+     "comparisonInfo": {
+      "caseSensitive": true,
+      "negate": false,
+      "operator": "EQUALS",
+      "type": "STRING",
+      "value": "Kubernetes Azure"
+     },
+     "key": {
+      "attribute": "KUBERNETES_CLUSTER_NAME"
+     }
+    }
+   ],
+   "enabled": true,
+   "propagationTypes": [],
+   "type": "CLOUD_APPLICATION"
+  }
+ ]
+}

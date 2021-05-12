@@ -1,0 +1,63 @@
+{
+    "metadata": {
+        "currentConfigurationVersions": [
+            "0"
+        ],
+        "configurationVersions": [],
+        "clusterVersion": "1.212.11.20210215-164655"
+    },
+    "displayName": "{{.name}}",
+    "rules": [
+        {
+            "severityLevel": "AVAILABILITY",
+            "tagFilter": {
+                "includeMode": "NONE",
+                "tagFilters": []
+            },
+            "delayInMinutes": 0
+        },
+        {
+            "severityLevel": "ERROR",
+            "tagFilter": {
+                "includeMode": "NONE",
+                "tagFilters": []
+            },
+            "delayInMinutes": 0
+        },
+        {
+            "severityLevel": "PERFORMANCE",
+            "tagFilter": {
+                "includeMode": "NONE",
+                "tagFilters": []
+            },
+            "delayInMinutes": 30
+        },
+        {
+            "severityLevel": "RESOURCE_CONTENTION",
+            "tagFilter": {
+                "includeMode": "NONE",
+                "tagFilters": []
+            },
+            "delayInMinutes": 30
+        },
+        {
+            "severityLevel": "CUSTOM_ALERT",
+            "tagFilter": {
+                "includeMode": "NONE",
+                "tagFilters": []
+            },
+            "delayInMinutes": 0
+        },
+        {
+            "severityLevel": "MONITORING_UNAVAILABLE",
+            "tagFilter": {
+                "includeMode": "NONE",
+                "tagFilters": []
+            },
+            "delayInMinutes": 0
+        }
+    ],
+    "managementZoneId": "{{.managementZoneID}}",
+    "mzId": "{{.managementZoneID}}",
+    "eventTypeFilters": []
+}

@@ -1,0 +1,1254 @@
+{
+ "dashboardMetadata": {
+  "dashboardFilter": {
+   "managementZone": null,
+   "timeframe": "l_2_HOURS"
+  },
+  "name": "{{.name}}",
+  "owner": "christian.barth@dynatrace.com",
+  "shared": false,
+  "sharingDetails": {
+   "linkShared": false,
+   "published": false
+  },
+  "tags": [
+   "EasyTravel",
+   "Forensics",
+   "Configurator",
+   "Powerup",
+   "Demo CdM"
+  ]
+ },
+ "metadata": {
+  "clusterVersion": "1.210.72.20210128-174736",
+  "configurationVersions": [
+   3
+  ]
+ },
+ "tiles": [
+  {
+   "bounds": {
+    "height": 38,
+    "left": 152,
+    "top": 190,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Requests](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20UserId%2Cduration%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.duration%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 152,
+    "top": 570,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Requests](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20UserId%2Cduration%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20not%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.duration%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 1292,
+    "top": 190,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Duration](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.duration%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.duration%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 1292,
+    "top": 570,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Duration](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.duration%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20not%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.duration%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 3762,
+    "top": 228,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "🚨 !PU(compare):link=link4;lt=white;gt=yellow;eq=white !PU(link):link3",
+   "name": "DTAQL",
+   "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 3762,
+    "top": 608,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "🚨 !PU(compare):link=link3;lt=white;gt=yellow;eq=white !PU(link):link4",
+   "name": "DTAQL",
+   "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and not ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 3762,
+    "top": 190,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Errors](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.errorCount%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20and%20useraction.errorCount%3E0%20order%20by%20useraction.errorCount%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 3762,
+    "top": 570,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Errors](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.errorCount%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20not%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20and%20useraction.errorCount%3E0%20order%20by%20useraction.errorCount%20DESC\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 4408,
+    "top": 190,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [NonEngaged](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquerytileconfigid=55885bfd-7d70-450d-b0a6-8570fe60dd00\u0026sessionquery=select%20userid%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20useraction.application%20in%20(%22EasyTravel%22)%20%20%20and%20usersession.duration%3E180000%20and%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20and%20userActionCount%3C10\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 4408,
+    "top": 570,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [NonEngaged](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquerytileconfigid=dd66617c-b601-44f6-982c-a871cc80b8a0\u0026sessionquery=select%20userid%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20useraction.application%20in%20(%22EasyTravel%22)%20%20%20and%20usersession.duration%3E180000%20and%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20not%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20and%20userActionCount%3C10\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 4712,
+    "top": 190,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Rage](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2CnumberOfRageClicks%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20useraction.application%20in%20(%22EasyTravel%22)%20%20%20and%20numberOfRageClicks%3E0%20and%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 4712,
+    "top": 570,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Rage](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2CnumberOfRageClicks%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20useraction.application%20in%20(%22EasyTravel%22)%20%20%20and%20numberOfRageClicks%3E0%20and%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20not%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 4712,
+    "top": 228,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "😡 !PU(compare):link=link6;lt=white;gt=yellow;eq=white !PU(link):link5",
+   "name": "DTAQL",
+   "query": "select sum(numberOfRageClicks) as \"Rages\" from usersession where useraction.application in (\"EasyTravel\")   and  numberOfRageClicks\u003e0   and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 4712,
+    "top": 608,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "😡 !PU(compare):link=link5;lt=white;gt=yellow;eq=white !PU(link):link6",
+   "name": "DTAQL",
+   "query": "select sum(numberOfRageClicks) as \"Rages\" from usersession where useraction.application in (\"EasyTravel\")   and  numberOfRageClicks\u003e0   and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and not ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 4408,
+    "top": 228,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "😴 !PU(compare):link=link8;lt=white;gt=yellow;eq=white !PU(link):link7",
+   "name": "DTAQL",
+   "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application in (\"EasyTravel\")   and usersession.duration\u003e180000   and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\")) and userActionCount\u003c10",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 4408,
+    "top": 608,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "😴 !PU(compare):link=link7;lt=white;gt=yellow;eq=white !PU(link):link8",
+   "name": "DTAQL",
+   "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application in (\"EasyTravel\")   and usersession.duration\u003e180000   and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and not ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\")) and userActionCount\u003c10",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 152,
+    "top": 76,
+    "width": 304
+   },
+   "configured": true,
+   "name": "Request Breakdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "HEADER"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 912,
+    "top": 76,
+    "width": 304
+   },
+   "configured": true,
+   "name": "Performance Breakdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "HEADER"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 152,
+    "top": 114,
+    "width": 4864
+   },
+   "configured": true,
+   "name": "______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "HEADER"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 3762,
+    "top": 76,
+    "width": 304
+   },
+   "configured": true,
+   "name": "Error Breakdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "HEADER"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 4408,
+    "top": 76,
+    "width": 266
+   },
+   "configured": true,
+   "name": "Usability Breakdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "HEADER"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 2204,
+    "top": 228,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "⏱ !PU(compare):link=link12;lt=white;gt=yellow;eq=white !PU(link):link11",
+   "name": "DTAQL",
+   "query": "select AVG(useraction.serverTime) as \"Server\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 2204,
+    "top": 608,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "⏱ !PU(compare):link=link11;lt=white;gt=yellow;eq=white !PU(link):link12",
+   "name": "DTAQL",
+   "query": "select AVG(useraction.serverTime) as \"Server\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and not ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 2508,
+    "top": 228,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "⏱ !PU(compare):link=link14;lt=white;gt=yellow;eq=white !PU(link):link13",
+   "name": "DTAQL",
+   "query": "select AVG(useraction.networkTime) as \"Network\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 2508,
+    "top": 608,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "⏱ !PU(compare):link=link13;lt=white;gt=yellow;eq=white !PU(link):link14",
+   "name": "DTAQL",
+   "query": "select AVG(useraction.networkTime) as \"Network\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and not ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 2812,
+    "top": 228,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "⏱ !PU(compare):link=link16;lt=white;gt=yellow;eq=white !PU(link):link15",
+   "name": "DTAQL",
+   "query": "select AVG(useraction.requestStart) as \"Request Start\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 2812,
+    "top": 608,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "⏱!PU(compare):link=link15;lt=white;gt=yellow;eq=white !PU(link):link16",
+   "name": "DTAQL",
+   "query": "select AVG(useraction.requestStart) as \"Request Start\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and not ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 3116,
+    "top": 228,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "⏱ !PU(compare):link=link18;lt=white;gt=yellow;eq=white !PU(link):link17",
+   "name": "DTAQL",
+   "query": "select AVG(useraction.loadEventEnd) as \"Load Event End\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 3116,
+    "top": 608,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "⏱ !PU(compare):link=link17;lt=white;gt=yellow;eq=white !PU(link):link18",
+   "name": "DTAQL",
+   "query": "select AVG(useraction.loadEventEnd) as \"Load Event End\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and not ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 3420,
+    "top": 228,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "⏱ !PU(compare):link=link20;lt=white;gt=yellow;eq=white !PU(link):link19",
+   "name": "DTAQL",
+   "query": "select AVG(useraction.documentInteractiveTime) as \"DOM Interactive\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 3420,
+    "top": 608,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "⏱!PU(compare):link=link19;lt=white;gt=yellow;eq=white !PU(link):link20",
+   "name": "DTAQL",
+   "query": "select AVG(useraction.documentInteractiveTime) as \"DOM Interactive\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and not ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 4066,
+    "top": 228,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "🚨 !PU(compare):link=link22;lt=white;gt=yellow;eq=white !PU(link):link21",
+   "name": "DTAQL",
+   "query": "select sum(useraction.failedImages) as \"Failed Images\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 4066,
+    "top": 608,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "🚨!PU(compare):link=link21;lt=white;gt=yellow;eq=white !PU(link):link22",
+   "name": "DTAQL",
+   "query": "select sum(useraction.failedImages) as \"Failed Images\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and not ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 1596,
+    "top": 228,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "⏱ !PU(compare):link=link24;lt=white;gt=yellow;eq=white !PU(link):link23",
+   "name": "DTAQL",
+   "query": "select AVG(useraction.visuallyCompleteTime) as \"Visually Complete\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 1900,
+    "top": 228,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "⏱ !PU(compare):link=link26;lt=white;gt=yellow;eq=white !PU(link):link25",
+   "name": "DTAQL",
+   "query": "select AVG(useraction.speedIndex) as \"Speed Index\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 1596,
+    "top": 608,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "⏱ !PU(compare):link=link23;lt=white;gt=yellow;eq=white !PU(link):link24",
+   "name": "DTAQL",
+   "query": "select AVG(useraction.visuallyCompleteTime) as \"Visually Complete\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and not ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 1900,
+    "top": 608,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "⏱ !PU(compare):link=link25;lt=white;gt=yellow;eq=white !PU(link):link26",
+   "name": "DTAQL",
+   "query": "select AVG(useraction.speedIndex) as \"Speed Index\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and not ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 1596,
+    "top": 190,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Visually Complete](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.visuallyCompleteTime%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.visuallyCompleteTime%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 1596,
+    "top": 570,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Visually Complete](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.visuallyCompleteTime%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20not%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.visuallyCompleteTime%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 1900,
+    "top": 190,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Speed Index](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.speedIndex%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.speedIndex%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 1900,
+    "top": 570,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Speed Index](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.speedIndex%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20not%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.speedIndex%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 2204,
+    "top": 190,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Server](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.serverTime%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.serverTime%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 2204,
+    "top": 570,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Server](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.serverTime%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20not%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.serverTime%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 2508,
+    "top": 190,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Network](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.networkTime%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.networkTime%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 2508,
+    "top": 570,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Network](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.networkTime%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20not%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.networkTime%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 2812,
+    "top": 190,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Request Start](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.requestStart%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.requestStart%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 2812,
+    "top": 570,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Request Start](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.requestStart%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20not%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.requestStart%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 3116,
+    "top": 190,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Load Event End](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.loadEventEnd%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.loadEventEnd%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 3116,
+    "top": 570,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Load Event End](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.loadEventEnd%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20not%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.loadEventEnd%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 3420,
+    "top": 190,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [DOM Interactive](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.documentInteractiveTime%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.documentInteractiveTime%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 3420,
+    "top": 570,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [DOM Interactive](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.documentInteractiveTime%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20not%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.documentInteractiveTime%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 4066,
+    "top": 190,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Failed Images](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.failedImages%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20and%20useraction.failedImages%3E0%20order%20by%20useraction.failedImages%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 4066,
+    "top": 570,
+    "width": 304
+   },
+   "configured": true,
+   "markdown": "## [Failed Images](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20userid%2Cuseraction.failedImages%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20not%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20and%20useraction.failedImages%3E0%20order%20by%20useraction.failedImages%20DESC\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 494,
+    "top": 76,
+    "width": 380
+   },
+   "configured": true,
+   "name": "Environment Breakdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "HEADER"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 912,
+    "top": 190,
+    "width": 380
+   },
+   "configured": true,
+   "markdown": "## [Apdex](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20UserId%2Cuserexperiencescore%2Cduration%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.duration%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 912,
+    "top": 570,
+    "width": 380
+   },
+   "configured": true,
+   "markdown": "## [Apdex](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20UserId%2Cuserexperiencescore%2Cduration%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20not%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.duration%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 494,
+    "top": 190,
+    "width": 380
+   },
+   "configured": true,
+   "markdown": "## [Requests by City](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20UserId%2CCity%2Cduration%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.duration%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 38,
+    "left": 494,
+    "top": 570,
+    "width": 380
+   },
+   "configured": true,
+   "markdown": "## [Requests by City](https://xwp89059.sprint.dynatracelabs.com/ui/user-sessions/query?sessionquery=select%20UserId%2CCity%2Cduration%2Cusersession.hassessionreplay%20FROM%20usersession%20where%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange.jsf%22))%20and%20not%20((useraction.application%3D%22EasyTravel%22%20and%20useraction.name%3D%22loading%20of%20page%20%2Forange-booking-review.jsf%22))%20order%20by%20useraction.duration%20desc\u0026visualization=TABLE)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 228,
+    "left": 0,
+    "top": 266,
+    "width": 114
+   },
+   "configured": true,
+   "markdown": "![]()\n## Sessions![]()\n## That![]()\n## Continued![]()\n## To![]()\n## Review",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 76,
+    "left": 114,
+    "top": 304,
+    "width": 38
+   },
+   "configured": true,
+   "markdown": "![]()\n![]()\n # ▶",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 228,
+    "left": 0,
+    "top": 646,
+    "width": 114
+   },
+   "configured": true,
+   "markdown": "![]()\n## Sessions![]()\n## That![]()\n## Exited![]()\n## At![]()\n## Main Page",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 76,
+    "left": 114,
+    "top": 684,
+    "width": 38
+   },
+   "configured": true,
+   "markdown": "![]()\n![]()\n # ▶",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 494,
+    "top": 228,
+    "width": 380
+   },
+   "configured": true,
+   "customName": "🏙 !PU(usqlcolor):colors=#4363d8,#FFCB05,#3cb44b,#f58231,#911eb4,#42d4f4,#f032e6,#bfef45,#fabed4,#469990,#e6beff,#9a6324,#fffac8,#800000,#aaffc3,#808000,#ffd8b1,#000075,#a9a9a9,#ffffff,#000000",
+   "limit": 50,
+   "name": "User Sessions Query",
+   "query": "select count(usersessionid) as \"Requests\",City FROM usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\")) group by City",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "type": "PIE_CHART"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 494,
+    "top": 608,
+    "width": 380
+   },
+   "configured": true,
+   "customName": "🏙 !PU(usqlcolor):colors=#4363d8,#FFCB05,#3cb44b,#f58231,#911eb4,#42d4f4,#f032e6,#bfef45,#fabed4,#469990,#e6beff,#9a6324,#fffac8,#800000,#aaffc3,#808000,#ffd8b1,#000075,#a9a9a9,#ffffff,#000000",
+   "limit": 50,
+   "name": "User Sessions Query",
+   "query": "select count(usersessionid) as \"Requests\",City FROM usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and not ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\")) group by City",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "type": "PIE_CHART"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 912,
+    "top": 228,
+    "width": 380
+   },
+   "configured": true,
+   "customName": "🏆 !PU(usqlcolor):vals=satisfied,tolerated,frustrated;colors=#39ff14,#ffe11c,#FF1C1C",
+   "limit": 50,
+   "name": "User Sessions Query",
+   "query": "select count(usersessionid) as \"Requests\", userExperienceScore FROM usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\")) group by userExperienceScore",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "type": "PIE_CHART"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 912,
+    "top": 608,
+    "width": 380
+   },
+   "configured": true,
+   "customName": "🏆 !PU(usqlcolor):vals=satisfied,tolerated,frustrated;colors=#39ff14,#ffe11c,#FF1C1C",
+   "limit": 50,
+   "name": "User Sessions Query",
+   "query": "select count(usersessionid) as \"Requests\", userExperienceScore FROM usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and not ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\")) group by userExperienceScore",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "type": "PIE_CHART"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 152,
+    "top": 608,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "🎯 !PU(compare):link=link9;lt=red;gt=green;eq=yellow !PU(link):link10",
+   "limit": 50,
+   "name": "User Sessions Query",
+   "query": "select count(usersessionid) as \"Requests\" FROM usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and not ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 152,
+    "top": 228,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "🎯 !PU(compare):link=link10;lt=red;gt=green;eq=yellow !PU(link):link9",
+   "limit": 50,
+   "name": "User Sessions Query",
+   "query": "select count(usersessionid) as \"Requests\" FROM usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 1292,
+    "top": 228,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "⏱ !PU(compare):link=linkb;lt=white;gt=yellow;eq=white !PU(link):linka",
+   "limit": 50,
+   "name": "User Sessions Query",
+   "query": "select AVG(useraction.duration) as \"Duration\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 266,
+    "left": 1292,
+    "top": 608,
+    "width": 304
+   },
+   "configured": true,
+   "customName": "⏱ !PU(compare):link=linka;lt=white;gt=yellow;eq=white !PU(link):linkb",
+   "limit": 50,
+   "name": "User Sessions Query",
+   "query": "select AVG(useraction.duration) as \"Duration\" from usersession where useraction.application in (\"EasyTravel\")     and ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange.jsf\")) and not ((useraction.application=\"EasyTravel\" and useraction.name=\"loading of page /orange-booking-review.jsf\"))",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "DTAQL",
+   "timeFrameShift": "dynamic",
+   "type": "SINGLE_VALUE"
+  },
+  {
+   "bounds": {
+    "height": 76,
+    "left": 0,
+    "top": 0,
+    "width": 1254
+   },
+   "configured": true,
+   "markdown": "##💎 Powerup Enabled Dashboard 💎\n\n##  [Install Chrome Extension](https://chrome.google.com/webstore/detail/dynatrace-dashboard-power/dmpgdhbpdodhddciokonbahhbpaalmco)",
+   "name": "Markdown",
+   "tileFilter": {
+    "managementZone": null,
+    "timeframe": null
+   },
+   "tileType": "MARKDOWN"
+  }
+ ]
+}
