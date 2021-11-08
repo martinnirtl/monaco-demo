@@ -1,0 +1,7 @@
+config:
+- Dashboard1: CS_Dashboard1.json
+- Dashboard2: CS_Dashboard2.json
+Dashboard1:
+- name: Monaco - Dashboard 1
+Dashboard2:
+- name: Monaco - Dashboard 2

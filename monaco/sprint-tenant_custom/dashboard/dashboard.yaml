@@ -1,7 +1,0 @@
-config:
-- KC_Dashboard2: CS_Dashboard2.json
-- KC_Dashboard1: CS_Dashboard1.json
-KC_Dashboard2:
-- name: CoachingSession - Dashboard2
-KC_Dashboard1:
-- name: CoachingSession - Dashboard1
