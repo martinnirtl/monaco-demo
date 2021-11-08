@@ -1,7 +1,7 @@
 config:
-- Dashboard1: CS_Dashboard1.json
-- Dashboard2: CS_Dashboard2.json
+- Dashboard1: dashboard-biz.json
+- Dashboard2: dashboard-apm.json
 Dashboard1:
-- name: Monaco - Dashboard 1
+- name: Backend App - Biz Insights
 Dashboard2:
-- name: Monaco - Dashboard 2
+- name: Backend App - APM

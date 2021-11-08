@@ -2,4 +2,4 @@ config:
 - alerting_profile_demo: alerting_profile_demo.json
 alerting_profile_demo:
 - name: Demo Alerting Profile
-- managementZoneID: "sprint-tenant_custom/management-zone/Backend.id"
+- managementZoneID: "backend-app/management-zone/Backend.id"
