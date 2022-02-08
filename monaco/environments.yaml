@@ -2,3 +2,8 @@ sprint-tenant:
    - name: "My sprint tenant"
    - env-url: "https://ztn45169.sprint.dynatracelabs.com/"
    - env-token-name: "DT_API_TOKEN"
+
+prod-tenant:
+   - name: "My prod tenant"
+   - env-url: "https://ztn45169.sprint.dynatracelabs.com/"
+   - env-token-name: "DT_API_TOKEN"
